@@ -5,33 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
-puts 'creating 20 users '
-20.times do
-  user = User.new(
-    name: Faker::Name.name
-    email: Faker::Internet.email
-    adress: Faker::Address.city
-    phone_number: Faker::PhoneNumber.phone_number
 
-  )
-  user.save
-end
-puts 'creating 20 boats'
-20.times do
+User.destroy_all
+Boat.destroy_all
+
+puts 'creating users '
+
+user1 = User.new(
+  email: "diouri@test.com",
+  password: "password"
+)
+user1.save
+
+user2 = User.new(
+  email: "daoudi@test.com",
+  password: "password"
+)
+user2.save
+
+
+
+puts 'creating boats'
+
 boat = Boat.new(
-  name: Faker::FunnyName.name
-  description: Faker::Vehicle.model
-  price: Faker::Commerce.price
+  name: 'bateau',
+  user: user1,
+  description: "yacht",
+  price: 100,
+
 
 )
 boat.save
-end
-puts 'creating 15 orders '
-15.times do
-  order = Order.new(
-    start_date:Faker::Date.in_date_period
-    end_date: Faker::Date.in_date_period
-  )
-  order.save
-end
