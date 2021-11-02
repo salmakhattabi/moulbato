@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+<<<<<<< HEAD
   has_many :spaces
   has_many :rentals
 
@@ -13,4 +14,8 @@ class User < ApplicationRecord
   # def photo_or_default
   #   @photo = photo.file.nil?
   # end
+=======
+  has_many :orders
+  has_many :boats
+>>>>>>> master
 end

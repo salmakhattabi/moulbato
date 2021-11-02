@@ -1,6 +1,7 @@
 class Boat < ApplicationRecord
   belongs_to :user
   has_many :orders
+<<<<<<< HEAD
 
   mount_uploader :photo, PhotoUploader
 
@@ -35,4 +36,6 @@ class Boat < ApplicationRecord
   def address_geo
     [address, city, country].compact.join(', ')
   end
+=======
+>>>>>>> master
 end

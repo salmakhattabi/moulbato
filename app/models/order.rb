@@ -5,4 +5,5 @@ class Orders < ApplicationRecord
   def to_s
     "#{space.name} from: #{start_date} to: #{end_date}"
   end
+
 end
