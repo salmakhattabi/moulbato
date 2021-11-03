@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'pages#home'
+  root to: 'pages#home'
+  #get 'dashboard', to: 'pages#dashboard '
 
   resources :boats do
     resources :orders, only: [:index, :new, :create]
