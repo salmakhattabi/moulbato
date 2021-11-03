@@ -2,13 +2,17 @@ class BoatsController < ApplicationController
   def index
   @boats = Boat.all
  end
+
  def new
   @boat = Boat.new
  end
+
   def create
     @boat = Boat.new(boat_params)
+    @user = User.first
+    @boat.user = @user
     if @boat.save
-      redirect_to boat_path
+      redirect_to root_path
     else
       render :new
     end
@@ -17,6 +21,7 @@ class BoatsController < ApplicationController
   def show
     @boat = Boat.find(params[:id])
   end
+
   private
 
   def set_boat
