@@ -23,16 +23,44 @@ user2 = User.new(
 )
 user2.save
 
-
-
 puts 'creating boats'
 
-boat = Boat.new(
-  name: 'bateau',
+boat1 = Boat.new(
+  name: 'Sirius',
   user: user1,
   description: "yacht",
-  price: 100,
-
-
+  price: 1500,
 )
-boat.save
+boat1.save
+
+boat2 = Boat.new(
+  name: 'Altaïr',
+  user: user1,
+  description: "vedette",
+  price: 1500,
+)
+boat2.save
+
+boat3 = Boat.new(
+  name:'PounPoun',
+  user: user2,
+  description: "super yacht",
+   price: 2000,
+)
+boat3.save
+
+boat4 = Boat.new(
+  name:'Amouaj',
+  user: user2,
+  description: "Day-cruiser",
+   price: 2500,
+)
+boat4.save
+
+boat5 = Boat.new(
+  name: 'Winder',
+  user: user2,
+  description: "jet-boat",
+  price: 2000,
+)
+boat5.save
