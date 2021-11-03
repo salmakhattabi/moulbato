@@ -2,6 +2,10 @@
   justify-content: space-between;
   background: white;
 }
+.navbar {
+  margin-top: -20px;
+
+}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -9,4 +13,14 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.container-fluid .navbar-brand {
+ color: #1BCB7F;
+}
+.navbar-nav .nav-item .nav-link.active {
+ color: #1BCB7F;
+}
+.navbar-nav .nav-item .nav-link {
+ color: #1BCB7F;
 }
