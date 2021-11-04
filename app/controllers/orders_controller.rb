@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_orders, only: [:index, :new, :create]
+  #before_action :set_orders, only: [:index, :new, :create]
 
   def index
     @orders = Order.all
@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     if @order.save
-      redirect_to boats_path
+      redirect_to boats_path(@new_boat_order)
     else
       render :new
     end
