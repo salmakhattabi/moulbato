@@ -64,3 +64,11 @@ boat5 = Boat.new(
   price: 2000,
 )
 boat5.save
+
+boat6 = Boat.new(
+  name: 'Touareg',
+  user: user2,
+  description: "jet-boat",
+  price: 6000,
+)
+boat6.save
