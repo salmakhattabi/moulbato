@@ -7,6 +7,10 @@ class BoatsController < ApplicationController
    @boat = Boat.new
  end
 
+  def show
+    @boat = Boat.find(params[:id])
+  end
+
   def create
     @boat = Boat.new(boat_params)
     @user = User.first
@@ -16,10 +20,6 @@ class BoatsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
-    @boat = Boat.find(params[:id])
   end
 
   private
