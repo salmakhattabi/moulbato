@@ -89,4 +89,3 @@ boat6 = Boat.new(
 
 boat6.photos.attach(io: File.open(Rails.root.join("app/assets/images/Touareg.jpg")), filename: 'nes.png', content_type: 'image/png')
 boat6.save
-
