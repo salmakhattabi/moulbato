@@ -7,8 +7,9 @@
   display: flex;
   align-items: center;
 }
-h2 .card-trip-pricing h{
+.card-trip-pricing {
   margin-top: 16px;
+  padding-top: 20px;
 }
 
 
@@ -88,4 +89,12 @@ h2 .card-trip-pricing h{
     text-align: center;
     margin: auto;
     margin-top: 21px;
+}
+.btn-flat {
+  a {
+    color: rgb(228, 228, 231) !important;
+    background-color: rgb(73, 73, 181);
+    padding: 14px 28px;
+    display: block !important;
+  }
 }
