@@ -15,13 +15,13 @@ user1 = User.new(
   email: "diouri@test.com",
   password: "password"
 )
-user1.save
+user1.save!
 
 user2 = User.new(
   email: "daoudi@test.com",
   password: "password"
 )
-user2.save
+user2.save!
 
 puts 'creating boats'
 
@@ -29,46 +29,46 @@ boat1 = Boat.new(
   name: 'Sirius',
   user: user1,
   description: "yacht",
-  price: 1500,
+  price: 1500
 )
-boat1.save
+boat1.save!
 
 boat2 = Boat.new(
   name: 'Altaïr',
   user: user1,
   description: "vedette",
-  price: 1500,
+  price: 1500
 )
-boat2.save
+boat2.save!
 
 boat3 = Boat.new(
   name:'PounPoun',
   user: user2,
   description: "super yacht",
-   price: 2000,
+   price: 2000
 )
-boat3.save
+boat3.save!
 
 boat4 = Boat.new(
   name:'Amouaj',
   user: user2,
   description: "Day-cruiser",
-   price: 2500,
+   price: 2500
 )
-boat4.save
+boat4.save!
 
 boat5 = Boat.new(
   name: 'Winder',
   user: user2,
   description: "jet-boat",
-  price: 2000,
+  price: 2000
 )
-boat5.save
+boat5.save!
 
 boat6 = Boat.new(
   name: 'Touareg',
   user: user2,
   description: "jet-boat",
-  price: 6000,
+  price: 6000
 )
-boat6.save
+boat6.save!

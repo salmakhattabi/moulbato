@@ -1,8 +1,7 @@
 class OrdersController < ApplicationController
-  before_action :set_orders, only: [:index, :new, :create]
-
   def index
     @orders = Order.all
+    @boats = Boat.all.where(user_id: current_user)
   end
 
   def new
@@ -11,20 +10,23 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
+    @user = User.first
     @boat = Boat.find(params[:boat_id])
-    @boat = @order.boat
-    @order.save
+    @order = Order.new(order_params)
+    @order.user = @user
+    @order.boat = @boat
+
+    if @order.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
 
-  def set_orders
-    @order = Order.find(params[:id])
-  end
-
   def order_params
-    params.require(:order).permit(:start_date, :end_date)
+    params.require(:order).permit(:start_date, :end_date, :boat_id)
   end
 
 end
