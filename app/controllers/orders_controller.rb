@@ -6,24 +6,25 @@ class OrdersController < ApplicationController
   end
 
   def new
+    @boat = Boat.find(params[:boat_id])
     @order = Order.new
-    @boat = Boat.new
   end
 
   def create
     @order = Order.new(order_params)
-    if @order.save
-      redirect_to boats_path
-    end
+    @boat = Boat.find(params[:boat_id])
+    @boat = @order.boat
+    @order.save
   end
 
   private
 
   def set_orders
-    @orders = Order.find(params[:id])
+    @order = Order.find(params[:id])
   end
 
   def order_params
-    params.require(:order).permit(:user_id, :boat_id)
+    params.require(:order).permit(:start_date, :end_date)
   end
+
 end
