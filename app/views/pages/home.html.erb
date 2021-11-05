@@ -1,51 +1,103 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">MoulBato</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">about as</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">log in</a></li>
-            <li><a class="dropdown-item" href="#">sign up</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Add your boat</a></li>
-          </ul>
-        </li>
+<div id="header" class="cf w-100 p-0">
 
-      </ul>
-      <form class="d-flex ">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+      <nav class="page-width navbar navbar-expand-lg d-flex  ">
+        <nav class="navbar d-flex align-items-start">
+          <div class="d-flex flex-row align-items-center">
+            <img src="data:image/png;base64,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" alt="icon bateau nav" width="50" height="50">
+            <a class="navbar-brand ps-2" href="#">MoulBato</a>
+          </div>
+        </nav>
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-6">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> About as</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">log in</a></li>
+                  <li><a class="dropdown-item" href="#">Sign up action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Add boat</a></li>
+                </ul>
+              </li>
 
-<body>
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/photos/man-using-smartphone-sitting-on-deck-sailing-across-sea-outdoors-picture-id1265993056?b=1&k=20&m=1265993056&s=170667a&w=0&h=dy0bVY8aitHQHSU64JokVT6f21pB8j1NvSpxhFI7ty8=);">
-    <div class="container">
-      <h1>MoulBato <strong>Find the right boat for your needs</strong>!</h1>
-      <p>The best boats respond to your needs.</p>
-      <div class="btn btn-flat">
-      <%= link_to "book now", boats_path %>
-      </div>
-      <div class="btn btn-flat">
-      <%= link_to "add your boat", new_boat_path %>
-      </div>
+            </ul>
+            <form class="d-flex flex-row col-6">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" style="color black">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+</div>
+
+<!-- Start video hero -->
+<div class="video-hero jquery-background-video-wrapper demo-video-wrapper" style="min-height:70vh">
+  <video class="jquery-background-video" autoplay muted loop poster="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.jpg">
+    <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.mp4" type="video/mp4">
+    <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.webm" type="video/webm">
+    <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.ogv" type="video/ogg">
+  </video>
+    <div class="video-overlay"></div>
+    <div class="page-width">
+        <div class="video-hero--content">
+          <h1>MoulBato <strong>Find the right boat for your needs</strong>!</h1>
+          <p>The best boats respond to your needs.</p>
+          <div class="btn btn-flat">
+           <button type="button" class="btn btn-outline-dark btn-lg "><%= link_to "book boat now", boats_path %></button>
+           <button type="button" class="btn btn-outline-dark btn-lg "><%= link_to "add you boat",  new_boat_path %></button>
+
+          </div>
+        </div>
     </div>
-  </div>
-</body>
+</div>
+<!-- End video hero -->
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+<h4>Horizontal Flip</h4>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">MOUNTAIN</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">LAKE</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+       <h1 class="text-shadow">OCEAN</hi>
+    </div>
+    <div class="back">
+       <h2>Angular</h2>
+       <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+    </div>
+</div>
+
+<br>
+<br>
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
@@ -55,7 +107,6 @@
     <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright">
-    This website is create  <i class="fas fa-heart"></i> by salma loubna yassine amin
+    this web page create by <i class="fas fa-heart"></i> Salma > Loubna >Yassine >Amine
   </div>
-
 </div>

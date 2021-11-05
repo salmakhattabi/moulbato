@@ -5,7 +5,7 @@
 
   <div class="cards">
     <% @boats.each do |boat| %>
-        <%= link_to boat_path(boat) do %>
+        <%= link_to boat_path(boat) %>
         <div>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80)">
               <%= boat.name %>
