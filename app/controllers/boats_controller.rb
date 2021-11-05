@@ -3,9 +3,13 @@ class BoatsController < ApplicationController
   @boats = Boat.all
  end
 
- def new
-  @boat = Boat.new
+  def new
+   @boat = Boat.new
  end
+
+  def show
+    @boat = Boat.find(params[:id])
+  end
 
   def create
     @boat = Boat.new(boat_params)
@@ -18,10 +22,6 @@ class BoatsController < ApplicationController
     end
   end
 
-  def show
-    @boat = Boat.find(params[:id])
-  end
-
   private
 
   def set_boat
@@ -29,6 +29,6 @@ class BoatsController < ApplicationController
   end
 
   def boat_params
-    params.require(:boat).permit(:name, :description, :price)
+    params.require(:boat).permit(:name, :description, :price, photos:[])
   end
 end
