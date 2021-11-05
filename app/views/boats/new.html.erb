@@ -1,5 +1,5 @@
 <div class="container py-5">
-  <div class="row">
+  <div class="form-group">
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
         <h3> Book Form </h3>
@@ -8,7 +8,7 @@
           <%= f.input :description %>
           <%= f.number_field :price %>
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-          <%= f.submit  %>
+          <%= f.submit id: "button-create"  %>
         <% end %>
       </div>
     </div>
