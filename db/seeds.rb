@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+require "open-uri"
 Boat.destroy_all
 User.destroy_all
 
@@ -31,6 +31,7 @@ boat1 = Boat.new(
   description: "yacht",
   price: 1500,
 )
+boat1.photos.attach(io: File.open(Rails.root.join("app/assets/images/Sirius.jpg")), filename: 'nes.png', content_type: 'image/png')
 boat1.save
 
 boat2 = Boat.new(
@@ -39,6 +40,7 @@ boat2 = Boat.new(
   description: "vedette",
   price: 1500,
 )
+boat2.photos.attach(io: File.open(Rails.root.join("app/assets/images/Altaïr.jpg")), filename: 'nes.png', content_type: 'image/png')
 boat2.save
 
 boat3 = Boat.new(
@@ -47,6 +49,7 @@ boat3 = Boat.new(
   description: "super yacht",
    price: 2000,
 )
+boat3.photos.attach(io: File.open(Rails.root.join("app/assets/images/PounPoun.jpg")), filename: 'nes.png', content_type: 'image/png')
 boat3.save
 
 boat4 = Boat.new(
@@ -55,6 +58,7 @@ boat4 = Boat.new(
   description: "Day-cruiser",
    price: 2500,
 )
+boat4.photos.attach(io: File.open(Rails.root.join("app/assets/images/Amouaj.jpg")), filename: 'nes.png', content_type: 'image/png')
 boat4.save
 
 boat5 = Boat.new(
@@ -63,6 +67,7 @@ boat5 = Boat.new(
   description: "jet-boat",
   price: 2000,
 )
+boat5.photos.attach(io: File.open(Rails.root.join("app/assets/images/Winder.jpg")), filename: 'nes.png', content_type: 'image/png')
 boat5.save
 
 boat6 = Boat.new(
@@ -71,4 +76,5 @@ boat6 = Boat.new(
   description: "jet-boat",
   price: 6000,
 )
+boat6.photos.attach(io: File.open(Rails.root.join("app/assets/images/Touareg.jpg")), filename: 'nes.png', content_type: 'image/png')
 boat6.save
