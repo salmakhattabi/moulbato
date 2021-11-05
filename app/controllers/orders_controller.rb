@@ -15,7 +15,6 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.user = @user
     @order.boat = @boat
-
     if @order.save
       redirect_to root_path
     else
@@ -28,5 +27,4 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order).permit(:start_date, :end_date, :boat_id)
   end
-
 end
