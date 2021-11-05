@@ -4,10 +4,10 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">about as</a>
@@ -22,37 +22,40 @@
             <li><a class="dropdown-item" href="#">Add your boat</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">search</a>
-        </li>
+
       </ul>
-      <form class="d-flex">
+      <form class="d-flex ">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
   </div>
 </nav>
-<img src="/assets/homepage.jpg;" class="img-fluid" alt="boat">
-<div class="banner" style="">
-  <div class="banner-content">
-    <h1>Find the right boat for your needs </h1>
-    <p>The best boats respond to your needs.</p>
-    <a class="btn btn-primary btn-lg">Start now</a>
-  </div>
 
-  <div class="footer-copyright">
-    This footer is made with <i class="fa fa-heart"></i> at Le Wagon Casablanca Batch #717
-  </div>
-  <div class="navbar-wagon-item">
-    <div class="dropdown">
-
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-
-      </ul>
-
+<body>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/photos/man-using-smartphone-sitting-on-deck-sailing-across-sea-outdoors-picture-id1265993056?b=1&k=20&m=1265993056&s=170667a&w=0&h=dy0bVY8aitHQHSU64JokVT6f21pB8j1NvSpxhFI7ty8=);">
+    <div class="container">
+      <h1>MoulBato <strong>Find the right boat for your needs</strong>!</h1>
+      <p>The best boats respond to your needs.</p>
+      <div class="btn btn-flat">
+      <%= link_to "book now", boats_path %>
+      </div>
+      <div class="btn btn-flat">
+      <%= link_to "add your boat", new_boat_path %>
+      </div>
     </div>
   </div>
-
+</body>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This website is create  <i class="fas fa-heart"></i> by salma loubna yassine amin
+  </div>
 
 </div>
