@@ -3,8 +3,8 @@ class BoatsController < ApplicationController
   @boats = Boat.all
  end
 
- def new
-  @boat = Boat.new
+  def new
+   @boat = Boat.new
  end
 
   def show
@@ -29,6 +29,6 @@ class BoatsController < ApplicationController
   end
 
   def boat_params
-    params.require(:boat).permit(:name, :description, :price)
+    params.require(:boat).permit(:name, :description, :price, photos:[])
   end
 end
